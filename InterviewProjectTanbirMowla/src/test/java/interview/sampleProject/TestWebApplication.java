@@ -38,8 +38,8 @@ public class TestWebApplication {
 		filters = new WebApplicationUserFilter();
 		
 		users.clickUsers(chromeDriver);
-//		filters.filterByUsername(chromeDriver);
-//		filters.filterByEmail(chromeDriver);
+		filters.filterByUsername(chromeDriver);
+		filters.filterByEmail(chromeDriver);
 		filters.filterByTimeFrame(chromeDriver);
 	}
 
