@@ -12,9 +12,9 @@ public class WebApplicationCreateUser {
 
 	Highlighter highLighter = new Highlighter();
 	WebDriverWait waitTime = null;
-	String username = "tmowla";
+	String username = "alpha";
 	String passWord = "123456";
-	String emailAdd = "tmowla@yahoo.com";
+	String emailAdd = "abc@yahoo.com";
 	
 	//Method to test clicking Users tab
 	public void clickUsers(WebDriver driver){
@@ -52,7 +52,7 @@ public class WebApplicationCreateUser {
 		highLighter.highlight(driver, email);
 		email.sendKeys(emailAdd); 
 		
-		WebElement createUserBtn = driver.findElement(By.name("commit")); 
+		WebElement createUserBtn = driver.findElement(By.xpath("//input[@name='commit']"));
 		highLighter.highlight(driver, createUserBtn);
 		createUserBtn.click();
 		
