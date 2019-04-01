@@ -5,7 +5,8 @@
     <classes>
       <class name="interview.sampleProject.TestWebApplication">
         <methods>
-          <include name="testWebApplication"/>
+          <include name="setUp"/>
+          <include name="testUserFilter"/>
         </methods>
       </class> <!-- interview.sampleProject.TestWebApplication -->
     </classes>
