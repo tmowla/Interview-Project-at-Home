@@ -23,7 +23,7 @@ public class TestWebApplication {
 		chromeDriver.manage().window().maximize();
 	}
 	
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void testCreateUser(){
 		users = new WebApplicationCreateUser();
 		
@@ -32,7 +32,7 @@ public class TestWebApplication {
 		users.createNewUser(chromeDriver);
 	}
 	
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void testUserFilter() throws InterruptedException {
 		users = new WebApplicationCreateUser();
 		filters = new WebApplicationUserFilter();
