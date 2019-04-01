@@ -13,7 +13,6 @@ import junit.framework.Assert;
 public class WebApplicationUserFilter {
 	Highlighter highLighter = new Highlighter();
 	WebDriverWait waitTime = null;
-	String emailAdd = "tmowla@yahoo.com";
 	
 	public void filterByUsername(WebDriver driver) throws InterruptedException {
 		waitTime = new WebDriverWait(driver, 10);
@@ -27,19 +26,19 @@ public class WebApplicationUserFilter {
 
 		//username input
 		WebElement usernameInput = driver.findElement(By.id("q_username"));
-		usernameInput.sendKeys("tmowla");
+		usernameInput.sendKeys("alpha");
 		highLighter.highlight(driver, usernameInput);
 		
 		//filter button test
-		WebElement filterButton = driver.findElement(By.name("commit")); 
+		WebElement filterButton = driver.findElement(By.xpath("//input[@name='commit']"));
 		highLighter.highlight(driver, filterButton);
 		filterButton.click();
 		
 		//Validate the confirmation page for the specific filter
-		WebElement userName = driver.findElement(By.xpath("//*[@id=\"user_168\"]/td[3]"));
+		WebElement userName = driver.findElement(By.xpath("//*[@id=\"user_171\"]/td[3]"));
 		String attribute = userName.getAttribute("innerText");
 		highLighter.highlight(driver, userName);
-		Assert.assertEquals("tmowla", attribute);
+		Assert.assertEquals("alpha", attribute);
 	}
 	
 	
@@ -56,19 +55,19 @@ public class WebApplicationUserFilter {
 		
 		//user input
 		WebElement usernameInput = driver.findElement(By.id("q_email"));
-		usernameInput.sendKeys("tmowla@yahoo.com");
+		usernameInput.sendKeys("abc@yahoo.com");
 		highLighter.highlight(driver, usernameInput);
 		
 		//filter button test
-		WebElement filterButton = driver.findElement(By.name("commit")); 
+		WebElement filterButton = driver.findElement(By.xpath("//input[@name='commit']"));
 		highLighter.highlight(driver, filterButton);
 		filterButton.click();
 		
 		//Validate the confirmation page for specific filter
-		WebElement email = driver.findElement(By.xpath("//*[@id=\"user_168\"]/td[4]"));
+		WebElement email = driver.findElement(By.xpath("//*[@id=\"user_171\"]/td[4]"));
 		String attribute = email.getAttribute("innerText");
 		highLighter.highlight(driver, email);
-		Assert.assertEquals("tmowla@yahoo.com", attribute);
+		Assert.assertEquals("abc@yahoo.com", attribute);
 	}
 	
 	public void filterByTimeFrame(WebDriver driver) {
