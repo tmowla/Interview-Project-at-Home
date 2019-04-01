@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="1" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="7213" started-at="2019-04-01T06:27:37Z" finished-at="2019-04-01T06:27:44Z">
+  <suite name="Default suite" duration-ms="7869" started-at="2019-04-01T06:52:53Z" finished-at="2019-04-01T06:53:00Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="7213" started-at="2019-04-01T06:27:37Z" finished-at="2019-04-01T06:27:44Z">
+    <test name="Default test" duration-ms="7869" started-at="2019-04-01T06:52:53Z" finished-at="2019-04-01T06:53:00Z">
       <class name="interview.sampleProject.TestWebApplication">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:interview.sampleProject.TestWebApplication@523884b2]" name="setUp" is-config="true" duration-ms="5838" started-at="2019-04-01T06:27:37Z" finished-at="2019-04-01T06:27:43Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:interview.sampleProject.TestWebApplication@523884b2]" name="setUp" is-config="true" duration-ms="6468" started-at="2019-04-01T06:52:53Z" finished-at="2019-04-01T06:52:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testUserFilter()[pri:0, instance:interview.sampleProject.TestWebApplication@523884b2]" name="testUserFilter" duration-ms="1353" started-at="2019-04-01T06:27:43Z" finished-at="2019-04-01T06:27:44Z">
+        <test-method status="PASS" signature="testUserFilter()[pri:0, instance:interview.sampleProject.TestWebApplication@523884b2]" name="testUserFilter" duration-ms="1379" started-at="2019-04-01T06:52:59Z" finished-at="2019-04-01T06:53:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testUserFilter -->
