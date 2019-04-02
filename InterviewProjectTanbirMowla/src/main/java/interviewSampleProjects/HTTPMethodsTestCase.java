@@ -65,7 +65,8 @@ public class HTTPMethodsTestCase {
 		request.post("http://ec2-54-84-52-184.compute-1.amazonaws.com:3000/comments");
 		
 		//Validate the post
-		codeURL = resp.getStatusCode(); 
+		Response respAfterPost = RestAssured.get("http://ec2-54-84-52-184.compute-1.amazonaws.com:3000/comments/" + id);
+		codeURL = respAfterPost.getStatusCode(); 
 		System.out.println("Get Post URL status code - " + codeURL); 
 		Assert.assertEquals(codeURL, 200); //status Code check
 		
@@ -101,7 +102,8 @@ public class HTTPMethodsTestCase {
 		request.body(json.toJSONString());
 		request.put("http://ec2-54-84-52-184.compute-1.amazonaws.com:3000/users/1");
 		
-		codeURL = resp.getStatusCode(); 
+		Response respAfterPut = RestAssured.get("http://ec2-54-84-52-184.compute-1.amazonaws.com:3000/users/1");
+		codeURL = respAfterPut.getStatusCode(); 
 		System.out.println("Get Post URL status code - " + codeURL); 
 		Assert.assertEquals(codeURL, 200); //status Code check
 		
